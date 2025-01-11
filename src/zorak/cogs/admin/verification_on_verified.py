@@ -152,17 +152,15 @@ class Verification(commands.Cog):
                             "_Before you can join the server, we need to make sure you are not a robot._\n"
                             "_Please answer the following question._"
                             , view=SelectView(self.bot, self.bot.server_settings.verification_options)
-                            , ephemeral=True
                         )
                     else:
-                        await ctx.send("You are already verified. Go away.", ephemeral=True)
+                        await ctx.send("You are already verified. Go away.")
                 else:
                     await ctx.send(
                         "Please contact the @Staff. Verification is having technical problems."
-                        , ephemeral=True
                     )
             else:
-                await ctx.send("Verification has not been set up!", ephemeral=True)
+                await ctx.send("Verification has not been set up!")
 
 
 def setup(bot):
