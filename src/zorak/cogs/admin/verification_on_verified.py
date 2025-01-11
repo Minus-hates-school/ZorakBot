@@ -147,7 +147,7 @@ class Verification(commands.Cog):
             if hasattr(self.bot.server_settings, "verification_options"):
                 if "selectors" in self.bot.server_settings.verification_options:
                     if "✅" not in [role.name for role in ctx.author.roles]:
-                        await ctx.respond(
+                        await ctx.send(
                             "# ~ Verification ~ \n"
                             "_Before you can join the server, we need to make sure you are not a robot._\n"
                             "_Please answer the following question._"
@@ -155,14 +155,14 @@ class Verification(commands.Cog):
                             , ephemeral=True
                         )
                     else:
-                        await ctx.respond("You are already verified. Go away.", ephemeral=True)
+                        await ctx.send("You are already verified. Go away.", ephemeral=True)
                 else:
-                    await ctx.respond(
+                    await ctx.send(
                         "Please contact the @Staff. Verification is having technical problems."
                         , ephemeral=True
                     )
             else:
-                await ctx.respond("Verification has not been set up!", ephemeral=True)
+                await ctx.send("Verification has not been set up!", ephemeral=True)
 
 
 def setup(bot):
