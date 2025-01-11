@@ -135,7 +135,7 @@ class Verification(commands.Cog):
     # If you wanted to prepopulate the view with a user's current roles,
     # I think you could do it here. Grab the user object from ctx,
     # grab the roles, and pass it into the view. Which can then pass it into the dropdowns.
-    @commands.slash_command(description="Verification!")
+    @commands.command(description="Verification!")
     async def verify(self, ctx):
         """The slash command that initiates the fancy menus."""
         if str(type(ctx.channel)) == "<class 'discord.channel.DMChannel'>":
