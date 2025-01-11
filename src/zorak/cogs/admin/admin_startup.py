@@ -23,6 +23,7 @@ class OnStartup(commands.Cog):
         """
         Here's the juice. It's literally logging.
         """
+        await self.bot.sync_commands(guild_ids=[])
         logger.info("Successfully logged in as {%s}/ ID: {%s}", self.bot.user, self.bot.user.id)
         logger.info("Started at: {%s}", datetime.now())
         logger.info("Greetings, puny earth-creature.")
